@@ -1,0 +1,126 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #3faf82;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  width: 80px;
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content:hover {
+  cursor: pointer;
+}
+
+.line {
+  height: 8px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: transform 0.4s;
+  transform: scale(1);
+}
+
+.two.open {
+  transform: scale(0);
+}
+
+.one.open {
+  animation: animate-line-1 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
+}
+
+.one.close {
+  animation: animate-line-1-reverse 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
+}
+.three.close {
+  animation: animate-line-2-reverse 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
+}
+
+@keyframes animate-line-1 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate3d(0, 22px, 0) rotate(0deg);
+  }
+
+  100% {
+    transform: translate3d(0, 22px, 0) rotate(45deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes animate-line-1-reverse {
+  0% {
+    transform: translate3d(0, 22px, 0) rotate(45deg);
+  }
+
+  50% {
+    transform: translate3d(0, 22px, 0) rotate(0deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+
+@keyframes animate-line-2 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate3d(0, -22px, 0) rotate(0deg);
+  }
+
+  100% {
+    transform: translate3d(0, -22px, 0) rotate(135deg);
+  }
+}
+
+@keyframes animate-line-2-reverse {
+  0% {
+    transform: translate3d(0, -22px, 0) rotate(-45deg);
+  }
+
+  50% {
+    transform: translate3d(0, -22px, 0) rotate(0deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+.three.open {
+  animation: animate-line-2 0.7s cubic-bezier(0.3, 1, 0.7, 1) forwards;
+}
