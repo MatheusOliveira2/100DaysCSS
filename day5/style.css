@@ -1,0 +1,287 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+* {
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.table {
+  background-color: #fff;
+  border-radius: 4px;
+  width: 280px;
+  height: 220px;
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+}
+.table .header {
+  color: white;
+  border-radius: 4px 4px 0px 0px;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1ba64;
+  width: 100%;
+  padding: 16px;
+}
+
+.header .bold {
+  font-weight: bold;
+}
+
+.info span {
+  display: block;
+  font-size: small;
+}
+
+.revenue span {
+  display: block;
+  font-size: small;
+}
+
+.point {
+  left: 0px;
+  bottom: attr(position px);
+  height: 2px;
+  width: 2px;
+  background-color: green;
+}
+
+.legend {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px;
+}
+
+.legend * {
+  display: inline;
+  font-size: x-small;
+}
+
+.legend-item div {
+  display: inline-block;
+  width: 14px;
+  height: 4px;
+  border-radius: 4px;
+}
+
+.legend-item.views div {
+  background-color: red;
+  margin-right: 4px;
+}
+
+.legend-item.purchases div {
+  background-color: blue;
+  margin: 0 4px 0 16px;
+}
+
+.chart {
+  position: relative;
+  width: 100%;
+  height: 118px;
+  border-radius: 0 0 4px 4px;
+}
+
+.chart polyline {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.red {
+  height: 0;
+  stroke: red;
+}
+
+.blue {
+  height: 0;
+  stroke: blue;
+}
+.red .point {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: red;
+}
+.red .point1 {
+  left: 6px;
+  top: 43px;
+}
+
+.red .point2 {
+  left: 47px;
+  top: 9px;
+}
+
+.red .point3 {
+  left: 87px;
+  top: 20px;
+}
+
+.red .point4 {
+  left: 127px;
+  top: 8px;
+}
+
+.red .point5 {
+  left: 168px;
+  top: 35px;
+}
+
+.red .point6 {
+  left: 208px;
+  top: 45px;
+}
+
+.red .point7 {
+  left: 248px;
+  top: 16px;
+}
+
+.blue .point {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: blue;
+}
+.blue .point1 {
+  left: 6px;
+  top: 58px;
+}
+
+.blue .point2 {
+  left: 47px;
+  top: 47px;
+}
+
+.blue .point3 {
+  left: 87px;
+  top: 62px;
+}
+
+.blue .point4 {
+  left: 127px;
+  top: 52px;
+}
+
+.blue .point5 {
+  left: 168px;
+  top: 58px;
+}
+
+.blue .point6 {
+  left: 208px;
+  top: 71px;
+}
+
+.blue .point7 {
+  left: 248px;
+  top: 61px;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.red .tooltip::before {
+  background: red;
+}
+
+.blue .tooltip::before {
+  background: blue;
+}
+.tooltip:before {
+  content: attr(data-value);
+  position: absolute;
+  z-index: 200;
+
+  transform: translate(-40%, -110%);
+
+  width: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: x-small;
+  color: #fff;
+  text-align: center;
+  display: none;
+}
+
+.tooltip:hover {
+  cursor: pointer;
+}
+
+.tooltip:hover:before {
+  display: block;
+}
+
+.days {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 8px;
+  margin-top: 80px;
+}
+
+.days span {
+  position: absolute;
+  text-align: center;
+}
+
+.sun {
+  left: 6px;
+}
+
+.mon {
+  left: 42px;
+}
+
+.tue {
+  left: 82px;
+}
+
+.wed {
+  left: 120px;
+}
+.thur {
+  left: 162px;
+}
+.fri {
+  left: 205px;
+}
+.sat {
+  left: 245px;
+}
