@@ -1,0 +1,195 @@
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 299px;
+  width: 320px;
+  background-color: #fff;
+  display: flex;
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.img {
+  position: relative;
+  width: 70px;
+  aspect-ratio: auto 70 / 70;
+  height: 70px;
+  z-index: 2000;
+}
+
+.img:hover {
+  cursor: pointer;
+}
+
+.circle-1 {
+  position: absolute;
+  box-sizing: border-box;
+  width: 90px;
+  height: 90px;
+  top: -4px;
+  left: -4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #786450 #786450 #786450 transparent;
+  border-radius: 50%;
+  transition: all 1s;
+  animation-name: rotate-reverse;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+.circle-2 {
+  position: absolute;
+  box-sizing: border-box;
+  width: 98px;
+  height: 98px;
+  top: -8px;
+  left: -8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #786450 transparent #786450 #786450;
+  border-radius: 50%;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+.img:hover .circle-1 {
+  cursor: pointer;
+  animation-duration: 1s;
+
+  animation-name: rotate;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+}
+
+.img:hover .circle-2 {
+  animation-duration: 1s;
+
+  animation-name: rotate-reverse;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-reverse {
+  50% {
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.profile {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile span {
+  display: block;
+  text-align: center;
+}
+
+.profile button {
+  width: 120px;
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid #786450;
+  color: #786450;
+  background-color: transparent;
+}
+
+.profile button:hover {
+  cursor: pointer;
+  background-color: #786450;
+  color: white;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 82px;
+  height: 82px;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.job {
+  font-size: x-small;
+}
+
+.info {
+  width: 120px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.details {
+  width: 100%;
+  height: 33%;
+  background-color: #f5e8df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.details:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons button {
+  margin-top: 8px;
+}
